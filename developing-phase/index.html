@@ -1,60 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Development Tab</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #1e272e;
-            color: #ecf0f1;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fertilizer Recommendation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1117;
+      color: #ffffff;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        .development-tab {
-            background-color: #3498db;
-            color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 250px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: popUp 1s ease-in-out infinite alternate;
-        }
+    .container {
+      background-color: #1e1e2f;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 90%;
+    }
 
-        .development-tab .oops {
-            color: #e74c3c;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00ffcc;
+    }
 
-        .development-tab p {
-            margin: 0;
-            font-size: 16px;
-            line-height: 1.5;
-        }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
 
-        @keyframes popUp {
-            from {
-                transform: scale(1);
-            }
-            to {
-                transform: scale(1.05);
-            }
-        }
-    </style>
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2c2f40;
+      color: white;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00e6b8;
+    }
+  </style>
 </head>
 <body>
-    <div class="development-tab">
-        <p class="oops">Oops!</p>
-        <p>This tab is currently in the secret laboratory of development. Stay tuned for the grand reveal!</p>
-    </div>
+  <div class="container">
+    <h2>Smart Fertilizer Recommendation</h2>
+    <form>
+      <label>Temperature (°C)</label>
+      <input type="number" placeholder="e.g., 25" required />
+
+      <label>Humidity (%)</label>
+      <input type="number" placeholder="e.g., 50" required />
+
+      <label>Nitrogen Content (ppm)</label>
+      <input type="number" placeholder="e.g., 100" required />
+
+      <label>Phosphorous Content (ppm)</label>
+      <input type="number" placeholder="e.g., 100" required />
+
+      <label>Potassium Content (ppm)</label>
+      <input type="number" placeholder="e.g., 100" required />
+
+      <label>Select Soil Type</label>
+      <select>
+        <option>Loamy</option>
+        <option>Sandy</option>
+        <option>Clay</option>
+        <option>Black</option>
+        <option>Red</option>
+      </select>
+
+      <label>Select Crop Type</label>
+      <select>
+        <option>Rice</option>
+        <option>Wheat</option>
+        <option>Sugarcane</option>
+        <option>Maize</option>
+        <option>Cotton</option>
+      </select>
+
+      <button type="submit">Predict</button>
+    </form>
+  </div>
 </body>
 </html>
